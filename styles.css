@@ -71,7 +71,7 @@ body {
   padding: 0;
   height: 100vh;
   overflow-x: hidden;
-  background: transparent;
+  background: var(--color-bg-dark);
   font-family: "DynaPuff", Helvetica Neue, Helvetica, Arial, sans-serif;
   cursor: url(/img/casualPaw.png) 4 4, auto !important;
   color: var(--color-text-main);
@@ -533,18 +533,7 @@ header {
 
 /*END OF CLOUDS SECTION*/
 
-.dream-apply-blur {
-  position: relative;
-  width: 100%;
-  height: 8vh;
-  background: white;
-  filter: blur(40px);
-  z-index: 10;
-  margin-top: -4vh;
-  margin-bottom: -4vh;
-  opacity: 0.6;
-  pointer-events: none;
-}
+
 
 /*APPLY SECTION*/
 
@@ -552,12 +541,15 @@ header {
   position: relative;
   width: 100vw;
   height: 60vh;
+  margin-top: -5vh;
+  /* Pull up to overlap with the faded bottom of Dream section */
   /* You can change this — but it will stay consistent on all screens */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 /* Full-width, consistent background video */
@@ -1545,6 +1537,11 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 2;
+  /* Ensure it stays on top of apply section for the fade */
+  /* Mask image to fade out the bottom */
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .dream-video {
@@ -1552,6 +1549,7 @@ header {
   height: auto;
   display: block;
   object-fit: cover;
+  /* Add a slight blur to the bottom of the image itself? Maybe later if mask isn't enough */
 }
 
 .dream-overlay {
