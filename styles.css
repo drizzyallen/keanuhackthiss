@@ -1562,10 +1562,9 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  /* Changed from space-between to flex-start */
-  align-items: flex-start;
-  padding: 15% 5% 5% 5%;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
   /* Increased top padding to 15% to move Dream down */
   gap: 1rem;
   /* Added gap for consistent small spacing */
