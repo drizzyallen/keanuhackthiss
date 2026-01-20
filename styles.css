@@ -1107,6 +1107,12 @@ header {
   margin-bottom: 4vh;
 }
 
+.sponsor-subtitle {
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+}
+
 .sponsor-grid {
   display: grid;
   /* Responsive grid: fits as many 150px columns as possible */
