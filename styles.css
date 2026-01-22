@@ -1679,3 +1679,24 @@ header {
     font-size: 3rem;
   }
 }
+
+/* Thanks To Header - Smaller than others */
+.sponsor-thanks {
+  font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.sponsor-grid-thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#kean-cs-logo {
+  transform: scale(1.35);
+  /* Increased size as requested */
+}
