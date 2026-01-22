@@ -708,7 +708,7 @@ header {
 .track-section {
   position: relative;
   width: 100%;
-  min-height: 120vh;
+  min-height: 140vh;
   /* Increased min-height to allow breathing room */
   background-color: #7BAADA;
   overflow: hidden;
@@ -758,6 +758,31 @@ header {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   z-index: 5;
   width: 100%;
+}
+
+.themes-description {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 18vh auto 4rem auto;
+  text-align: center;
+  z-index: 5;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.themes-description p {
+  font-family: 'DynaPuff', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.themes-description p:last-child {
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-bottom: 0;
+  margin-top: 2rem;
 }
 
 .allFourcards {
@@ -1054,12 +1079,24 @@ header {
   position: relative;
   width: 100%;
   height: 150px;
-  background: linear-gradient(to bottom, #0a0a23, transparent);
+  background: linear-gradient(to bottom, #1e3c78, transparent);
   z-index: 5;
   margin-top: -1px;
   margin-bottom: -150px;
   /* Overlap with footer */
   pointer-events: none;
+}
+
+.schedule-sponsor-transition {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, #814E31 0%, #814E31 60%, #1e3c78 100%);
+  z-index: 2;
+  margin-top: -1px;
+  /* Prevent hairline gap */
+  margin-bottom: -1px;
+  /* Prevent hairline gap */
 }
 
 
@@ -1123,7 +1160,8 @@ header {
   position: relative;
   width: 100%;
   min-height: 60vh;
-  background: var(--color-bg-deep);
+  background: #1e3c78;
+  /* True blue */
   padding: var(--space-lg) var(--space-md);
   box-sizing: border-box;
   display: flex;
