@@ -764,7 +764,7 @@ header {
   position: relative;
   width: 80%;
   max-width: 800px;
-  margin: 18vh auto 4rem auto;
+  margin: 12vh auto 4rem auto;
   text-align: center;
   z-index: 5;
   color: white;
@@ -773,14 +773,17 @@ header {
 
 .themes-description p {
   font-family: 'DynaPuff', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
+
+
 
 .themes-description p:last-child {
   font-weight: 700;
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
   margin-bottom: 0;
   margin-top: 2rem;
 }
