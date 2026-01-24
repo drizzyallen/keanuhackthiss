@@ -993,9 +993,12 @@ header {
   gap: 0.8rem;
   width: 100%;
   max-width: 900px;
+  align-items: stretch;
 }
 
 .faq-item {
+  width: 100%;
+  box-sizing: border-box;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -1059,6 +1062,19 @@ header {
   /* Increased to ensure full content visibility */
   opacity: 1;
   margin-top: 1rem;
+}
+
+.faq-answer a {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.faq-answer a:hover {
+  color: #A7D8FF;
+  /* Match .faq-question color */
+  text-decoration: underline;
+  /* Keep underline */
 }
 
 /*END OF FAQ SECTION*/
