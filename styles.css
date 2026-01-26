@@ -1495,6 +1495,28 @@ header>* {
   margin: 0;
 }
 
+.register-caveat {
+  font-family: 'DynaPuff', cursive;
+  font-size: 1.2rem;
+  color: #A7D8FF;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(167, 216, 255, 0.6), 0 0 20px rgba(167, 216, 255, 0.4);
+  position: relative;
+  z-index: 20;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.register-caveat:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 15px rgba(167, 216, 255, 0.8), 0 0 30px rgba(167, 216, 255, 0.6);
+  opacity: 1;
+  color: white;
+}
+
 .schedule-disclaimer {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.3rem;
@@ -1505,6 +1527,8 @@ header>* {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  position: relative;
+  z-index: 20;
 }
 
 /* Timeline Track */
