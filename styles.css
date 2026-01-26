@@ -1204,13 +1204,12 @@ header {
 }
 
 .sponsor-grid {
-  display: grid;
-  /* Responsive grid: fits as many 150px columns as possible */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
   width: 100%;
   max-width: 800px;
-  justify-items: center;
 }
 
 .sponsor-item {
