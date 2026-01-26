@@ -266,3 +266,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Navigation Smooth Scroll Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default anchor jump
+      
+      const targetId = link.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        targetSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});
