@@ -23,7 +23,11 @@ window.addEventListener('load', () => {
 
   const startExit = () => {
     intro.classList.add('fly');
-    setTimeout(() => intro.remove(), EXIT_MS + 250);
+    setTimeout(() => {
+      intro.remove();
+      document.querySelector('#main-nav').style.pointerEvents = 'auto'; // Ensure nav is clickable
+      document.querySelector('header').style.pointerEvents = 'none'; // Keep header non-blocking
+    }, EXIT_MS + 250);
   };
 
   const t = setTimeout(startExit, BOB_MS);
