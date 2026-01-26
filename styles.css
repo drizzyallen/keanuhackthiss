@@ -1817,3 +1817,17 @@ header>* {
   text-align: center;
   opacity: 1;
 }
+
+/* Update specific FAQ intro text style */
+.faq-intro p {
+  font-family: 'DynaPuff', sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow:
+    0 0 10px rgba(167, 216, 255, 0.6),
+    /* Cool white/blueish glow */
+    3px 3px 6px rgba(0, 0, 0, 0.6);
+  /* Existing dark shadow */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
