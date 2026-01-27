@@ -207,7 +207,7 @@ header>* {
 }
 
 .logo img {
-  width: clamp(80px, 12vw, 185px);
+  width: clamp(70px, 10vw, 160px);
   height: auto;
   transition: transform var(--trans-smooth);
 }
@@ -398,6 +398,38 @@ header>* {
 .date:hover {
   transform: scale(1.05);
   text-shadow: 0 10px 28px rgba(255, 210, 255, 0.45), 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Replaced Text Images Sizing */
+.text-img {
+  height: 1.2em;
+  /* Reduced from 2em */
+  width: auto;
+  vertical-align: middle;
+  display: block;
+  /* Neon Glow Effect */
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 16px rgba(0, 200, 255, 0.5));
+}
+
+.text-img-phrase {
+  height: 2.2em;
+  /* Increased to 2.5em */
+  /* Slightly larger to match visual weight of original text */
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+  /* Soft Glow Effect */
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6));
+}
+
+.text-img-date {
+  height: 3.2em;
+  /* Increased to 3.5em */
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+  /* Soft Glow Effect */
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6));
 }
 
 
@@ -742,7 +774,7 @@ header>* {
   /* Adjusted position */
   left: -5vw;
   /* Pull slightly left to hide hard edge if any */
-  width: 45vw;
+  width: 40vw;
   /* Slightly larger */
   max-width: 600px;
   height: auto;
@@ -754,7 +786,7 @@ header>* {
   position: absolute;
   top: 10vh;
   right: 5vw;
-  max-width: 25vw;
+  max-width: 22vw;
   height: auto;
   z-index: 1;
   pointer-events: none;
@@ -883,7 +915,7 @@ header>* {
 }
 
 .card .img-content img {
-  width: 60%;
+  width: 50%;
   height: auto;
   object-fit: contain;
   /* Ensure image isn't cropped weirdly */
@@ -1228,8 +1260,8 @@ header>* {
 
 .partner-item {
   text-decoration: none;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -1269,8 +1301,8 @@ header>* {
 }
 
 .partner-item-no-border {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1334,7 +1366,7 @@ header>* {
   bottom: 27vh;
   /* Adjust based on full grass height */
   left: 2.5vw;
-  width: 24vw;
+  width: 21vw;
   /* Increased from 18vw */
   max-width: 400px;
   /* Increased from 300px */
