@@ -1855,11 +1855,21 @@ header>* {
   font-family: 'DynaPuff', sans-serif;
   color: white;
   text-align: center;
-  text-shadow:
-    0 0 10px rgba(167, 216, 255, 0.6),
+  text-shadow: 0 0 10px rgba(167, 216, 255, 0.6),
     /* Cool white/blueish glow */
     3px 3px 6px rgba(0, 0, 0, 0.6);
   /* Existing dark shadow */
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.dream-phrase-img {
+  width: clamp(200px, 50vw, 500px);
+  /* Responsive sizing */
+  height: auto;
+  display: block;
+  margin-bottom: 2vh;
+  animation: floatSpace 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(139, 44, 255, 0.4));
+  /* Match text-shadow color */
 }
