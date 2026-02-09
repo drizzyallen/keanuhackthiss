@@ -1873,3 +1873,28 @@ header>* {
   filter: drop-shadow(0 0 15px rgba(139, 44, 255, 0.4));
   /* Match text-shadow color */
 }
+
+/* MLH Trust Badge Styles */
+#mlh-trust-badge {
+  display: block;
+  max-width: 110px;
+  min-width: 60px;
+  position: fixed;
+  right: 220px;
+  top: 0;
+  width: 12%;
+  z-index: 10005;
+  transition: right 0.3s ease, max-width 0.3s ease;
+}
+
+#mlh-trust-badge img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #mlh-trust-badge {
+    right: 15px;
+    max-width: 80px;
+    width: 20%;
+  }
+}
