@@ -5,36 +5,7 @@ window.addEventListener("scroll", () => {
     `center ${0 - yOffset * 0.1}px`;
 });
 
-window.addEventListener('load', () => {
-  const intro = document.getElementById('intro');
-  if (!intro) return;
 
-  intro.classList.add('show');
-
-  const startWords = () => intro.classList.add('animate');
-  if (getComputedStyle(intro).transitionDuration !== '0s') {
-    intro.addEventListener('transitionend', startWords, { once: true });
-  } else {
-    startWords();
-  }
-
-  const BOB_MS = 2600;
-  const EXIT_MS = 900;
-
-  const startExit = () => {
-    intro.classList.add('fly');
-    setTimeout(() => {
-      intro.remove();
-      document.querySelector('#main-nav').style.pointerEvents = 'auto'; // Ensure nav is clickable
-      document.querySelector('header').style.pointerEvents = 'none'; // Keep header non-blocking
-    }, EXIT_MS + 250);
-  };
-
-  const t = setTimeout(startExit, BOB_MS);
-  ['click', 'keydown', 'scroll', 'touchstart'].forEach(ev =>
-    window.addEventListener(ev, () => { clearTimeout(t); startExit(); }, { once: true })
-  );
-});
 
 
 
@@ -270,16 +241,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // Navigation Smooth Scroll Logic
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
-  
+
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault(); // Prevent default anchor jump
-      
+
       const targetId = link.getAttribute('data-target');
       const targetSection = document.getElementById(targetId);
-      
+
       if (targetSection) {
-        targetSection.scrollIntoView({ 
+        targetSection.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });

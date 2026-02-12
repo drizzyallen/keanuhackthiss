@@ -33,35 +33,7 @@
   --trans-bounce: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/*first thing user sees---------------------------------------------------*/
-.intro {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background: var(--color-bg-dark);
-  color: var(--color-text-main);
-  z-index: 20000;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--trans-smooth);
-}
 
-.intro.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.phrase {
-  display: flex;
-  gap: 0.6rem;
-  font-family: inherit;
-  font-size: clamp(2rem, 6vw, 5rem);
-  font-weight: 800;
-  letter-spacing: .02em;
-  will-change: transform, opacity;
-}
 
 /*html law-------------------------------------------------------------------------*/
 
@@ -248,86 +220,7 @@ header>* {
   }
 }
 
-/*Word effect------------------------------------------------------------------------------------*/
 
-.word {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(24px);
-  animation: fadeUp .8s ease both, bob 3.6s ease-in-out infinite;
-  animation-play-state: paused, paused;
-}
-
-.word:nth-child(1) {
-  --delay: .00s;
-  animation-delay: .05s, 0s;
-}
-
-.word:nth-child(2) {
-  --delay: .07s;
-  animation-delay: .15s, .3s;
-}
-
-.word:nth-child(3) {
-  --delay: .14s;
-  animation-delay: .25s, .6s;
-}
-
-.word:nth-child(4) {
-  --delay: .21s;
-  animation-delay: .35s, .9s;
-}
-
-.intro.animate .word {
-  animation-play-state: running, running;
-}
-
-.intro.fly .word {
-  animation: wordFlyUp .9s cubic-bezier(.2, .8, .2, 1) forwards;
-  animation-delay: var(--delay);
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bob {
-  0% {
-    transform: translateY(0)
-  }
-
-  50% {
-    transform: translateY(-10px)
-  }
-
-  100% {
-    transform: translateY(0)
-  }
-}
-
-@keyframes wordFlyUp {
-  to {
-    transform: translateY(-110vh);
-    opacity: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .word,
-  .phrase {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .intro {
-    transition: none !important;
-  }
-}
 
 
 
@@ -468,19 +361,19 @@ header>* {
 /* stagger animation delays */
 
 .title-effect .wrd-effect:nth-child(1) {
-  animation-delay: 3.5s
+  animation-delay: 0.5s
 }
 
 .title-effect .wrd-effect:nth-child(2) {
-  animation-delay: 3.9s
+  animation-delay: 0.9s
 }
 
 .title-effect .wrd-effect:nth-child(3) {
-  animation-delay: 4.4s
+  animation-delay: 1.4s
 }
 
 .title-effect .wrd-effect:nth-child(4) {
-  animation-delay: 4.8s
+  animation-delay: 1.8s
 }
 
 /* keyframes for drop effect */
