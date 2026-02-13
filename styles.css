@@ -1123,6 +1123,34 @@ header>* {
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
 }
 
+@media (max-width: 768px) {
+  .footer {
+    background-size: cover;
+    background-position: bottom center;
+    /* Anchor background to bottom */
+    min-height: 350px;
+    /* Slight increase for visual balance */
+    flex-direction: column;
+    /* Ensure layout doesn't break */
+    /* Push content to bottom */
+    position: relative;
+    /* Ensure it's a positioning context */
+  }
+
+  .sleeping-dog {
+    width: 45vw;
+    bottom: 50px;
+    /* Use pixels for safer bottom distance */
+    left: 28%;
+    /* Simplify transform: just center it horizontally. Add rotation if needed but test first. */
+    transform: translateX(-50%);
+    margin-left: 0;
+    /* Reset any potential margins */
+    max-width: none;
+    /* Allow it to be as wide as needed */
+  }
+}
+
 
 /*PARTNERS SECTION*/
 
