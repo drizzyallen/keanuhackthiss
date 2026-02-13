@@ -1114,8 +1114,7 @@ header>* {
   /* Tucked deeper into the corner, larger size */
   bottom: 18%;
   left: 35%;
-  width: 22vw;
-  max-width: 350px;
+  width: 350px;
   z-index: 2;
   /* Perspective adjustment for a larger bed closer to the wall */
   transform: perspective(1000px) rotateX(28deg) rotateY(8deg) rotateZ(-6deg);
@@ -1138,7 +1137,7 @@ header>* {
   }
 
   .sleeping-dog {
-    width: 45vw;
+    width: 350px !important;
     bottom: 50px;
     /* Use pixels for safer bottom distance */
     left: 28%;
