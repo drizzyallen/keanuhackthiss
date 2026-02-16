@@ -1073,18 +1073,11 @@ header>* {
 .footer {
   position: relative;
   width: 100%;
-  height: 52.67vw;
-  /* Proportional to 2730x1438 image */
-  min-height: 500px;
-  background-image: url('img/Bazaart_EDB63B0A-B3F3-4D88-AFAB-045E29B1BB5B.PNG');
-  background-size: 100% 100%;
-  /* Fill entire container */
-  background-position: center bottom;
-  background-repeat: no-repeat;
+  /* Remove fixed heights and background images */
+  background: none;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -1094,28 +1087,47 @@ header>* {
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   /* Dark overlay for readability */
-  z-index: 1;
+  z-index: 2;
+  /* Increased to overlay the image */
+  pointer-events: none;
+}
+
+.room-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  /* Ensure it doesn't overflow */
+}
+
+.room-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Removes bottom spacing often found with inline images */
 }
 
 .kean-message {
   position: absolute;
   top: 18%;
   right: 8%;
-  z-index: 3;
+  z-index: 10;
   color: white;
   font-family: sans-serif;
-  font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+  font-size: clamp(0.4rem, 1.5vw, 1.6rem);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
 
 .sleeping-dog {
   position: absolute;
-  /* Tucked deeper into the corner, larger size */
-  bottom: 18%;
+  /* Tucked deeper into the corner */
+  bottom: 25%;
+  /* Relative to the image height */
   left: 35%;
-  width: 350px;
-  z-index: 2;
+  /* Relative to the image width */
+  width: 20%;
+  /* roughly 350px / 2730px ~= 12.8% */
+  z-index: 5;
   /* Perspective adjustment for a larger bed closer to the wall */
   transform: perspective(1000px) rotateX(28deg) rotateY(8deg) rotateZ(-6deg);
   pointer-events: none;
@@ -1124,30 +1136,15 @@ header>* {
 
 @media (max-width: 768px) {
   .footer {
-    background-size: cover;
-    background-position: bottom center;
-    /* Anchor background to bottom */
-    min-height: 350px;
-    /* Slight increase for visual balance */
-    flex-direction: column;
-    /* Ensure layout doesn't break */
-    /* Push content to bottom */
-    position: relative;
-    /* Ensure it's a positioning context */
+    display: block;
+    height: auto;
   }
 
-  .sleeping-dog {
-    width: 350px !important;
-    bottom: 50px;
-    /* Use pixels for safer bottom distance */
-    left: 28%;
-    /* Simplify transform: just center it horizontally. Add rotation if needed but test first. */
-    transform: translateX(-50%);
-    margin-left: 0;
-    /* Reset any potential margins */
-    max-width: none;
-    /* Allow it to be as wide as needed */
+  .room-container {
+    width: 100%;
   }
+
+
 }
 
 
