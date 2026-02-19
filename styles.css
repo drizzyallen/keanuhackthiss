@@ -206,8 +206,7 @@ header>* {
   }
 
   .logo {
-    justify-content: center;
-    margin-right: 0;
+    display: none;
   }
 
   .logo img {
@@ -217,6 +216,12 @@ header>* {
   .content {
     justify-content: center;
     padding-top: 12vh;
+  }
+
+  .title-effect {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -1561,6 +1566,8 @@ header>* {
   border-radius: 2px;
   transform: translateY(-50%);
   z-index: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .timeline-dots {
