@@ -29,6 +29,11 @@
 
     <header>
       <nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <ul id="main-nav">
           <li class="guides"><a href="#" class="nav-link" data-target="apply">Register</a></li>
           <li class="guides"><a href="#" class="nav-link" data-target="tracks">Themes</a></li>
@@ -399,7 +404,80 @@
     <img src="img/updatedCougar.PNG" class="grass-decoration" alt="Grass decoration">
   </div>
 
-  <div class="schedule-partner-transition"></div>
+
+  <!-- Alumni Section -->
+  <div id="alumni" class="alumni-section">
+    <h2 class="alumni-text">Alumni Panel</h2>
+    <div class="alumni-content">
+      <div class="alumni-left">
+        <img src="img/dinoAlumi.png" alt="Alumni Dino" class="dino-alumni">
+      </div>
+      <div class="alumni-right">
+        <div class="carousel-container">
+          <!-- Previous Button -->
+          <button class="carousel-prev-btn" aria-label="Previous Alumni">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"></path>
+              <path d="m12 19-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Card 1 -->
+          <div class="alumni-card active">
+            <img src="alumnis/Andrea_Deloitte.png" alt="Andrea Profile" class="profile-img">
+            <div class="alumni-info">
+              <h3 class="alumni-name">Andrea</h3>
+              <p class="alumni-title">Cybersecurity Analyst</p>
+              <p class="alumni-company">@Deloitte</p>
+            </div>
+            <a href="https://www.linkedin.com/in/andreabalcacer/" target="_blank" class="linkedin-link">
+              <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"
+                alt="LinkedIn Logo" class="linkedin-icon">
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="alumni-card">
+            <img src="alumnis/Gillian_Prudential.png" alt="Gillian Profile" class="profile-img">
+            <div class="alumni-info">
+              <h3 class="alumni-name">Gillian</h3>
+              <p class="alumni-title">Software Engineer</p>
+              <p class="alumni-company">@Prudential</p>
+            </div>
+            <a href="https://www.linkedin.com/in/gillianmroberts4/" target="_blank" class="linkedin-link">
+              <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"
+                alt="LinkedIn Logo" class="linkedin-icon">
+            </a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="alumni-card">
+            <img src="alumnis/Joseph_Lockheed.jpg" alt="Joseph Profile" class="profile-img">
+            <div class="alumni-info">
+              <h3 class="alumni-name">Joseph</h3>
+              <p class="alumni-title">Cyber Research Engineer</p>
+              <p class="alumni-company">@Lockheed Martin</p>
+            </div>
+            <a href="https://www.linkedin.com/in/joseph-waldron-a24038201/" target="_blank" class="linkedin-link">
+              <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"
+                alt="LinkedIn Logo" class="linkedin-icon">
+            </a>
+          </div>
+
+          <button class="carousel-next-btn" aria-label="Next Alumni">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alumni-partner-transition"></div>
 
   <div class="partner-section" id="partners">
     <h2 class="partner-text">Sponsors</h2>

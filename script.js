@@ -241,10 +241,26 @@ document.addEventListener('DOMContentLoaded', () => {
 // Navigation Smooth Scroll Logic
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mainNav = document.getElementById('main-nav');
+
+  // Mobile menu toggle
+  if (mobileMenu && mainNav) {
+    mobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      mainNav.classList.toggle('show');
+    });
+  }
 
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault(); // Prevent default anchor jump
+
+      // Close mobile menu if open
+      if (mobileMenu && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        mainNav.classList.remove('show');
+      }
 
       const targetId = link.getAttribute('data-target');
       const targetSection = document.getElementById(targetId);
@@ -257,4 +273,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Alumni Carousel Logic
+  const alumniCards = document.querySelectorAll('.alumni-card');
+  const nextBtn = document.querySelector('.carousel-next-btn');
+  const prevBtn = document.querySelector('.carousel-prev-btn');
+  let currentCardIndex = 0;
+
+  if (alumniCards.length > 0) {
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        alumniCards[currentCardIndex].classList.remove('active');
+        currentCardIndex = (currentCardIndex + 1) % alumniCards.length;
+        alumniCards[currentCardIndex].classList.add('active');
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        alumniCards[currentCardIndex].classList.remove('active');
+        currentCardIndex = (currentCardIndex - 1 + alumniCards.length) % alumniCards.length;
+        alumniCards[currentCardIndex].classList.add('active');
+      });
+    }
+  }
 });
