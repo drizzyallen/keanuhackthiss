@@ -236,10 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.toggle('active');
     });
   });
-});
 
-// Navigation Smooth Scroll Logic
-document.addEventListener('DOMContentLoaded', () => {
+  // Navigation Smooth Scroll Logic
   const navLinks = document.querySelectorAll('.nav-link');
   const mobileMenu = document.getElementById('mobile-menu');
   const mainNav = document.getElementById('main-nav');
@@ -276,21 +274,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Alumni Carousel Logic
   const alumniCards = document.querySelectorAll('.alumni-card');
-  const nextBtn = document.querySelector('.carousel-next-btn');
-  const prevBtn = document.querySelector('.carousel-prev-btn');
+  const nextBtnAlumni = document.querySelector('.carousel-next-btn');
+  const prevBtnAlumni = document.querySelector('.carousel-prev-btn');
   let currentCardIndex = 0;
 
   if (alumniCards.length > 0) {
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+    if (nextBtnAlumni) {
+      nextBtnAlumni.addEventListener('click', () => {
         alumniCards[currentCardIndex].classList.remove('active');
         currentCardIndex = (currentCardIndex + 1) % alumniCards.length;
         alumniCards[currentCardIndex].classList.add('active');
       });
     }
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
+    if (prevBtnAlumni) {
+      prevBtnAlumni.addEventListener('click', () => {
         alumniCards[currentCardIndex].classList.remove('active');
         currentCardIndex = (currentCardIndex - 1 + alumniCards.length) % alumniCards.length;
         alumniCards[currentCardIndex].classList.add('active');
