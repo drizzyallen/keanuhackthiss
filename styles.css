@@ -1216,12 +1216,13 @@ header>* {
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 550px;
-  gap: 1.5rem;
+  max-width: 900px;
+  height: 400px;
+  overflow: hidden;
 }
 
 .alumni-card {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1237,12 +1238,33 @@ header>* {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: opacity 0.5s ease;
-  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .alumni-card.active {
-  display: flex;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.alumni-card.prev {
+  transform: translate(-100%, -50%) scale(0.85);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.alumni-card.next {
+  transform: translate(0%, -50%) scale(0.85);
+  opacity: 0.6;
+  z-index: 1;
 }
 
 .profile-img {
@@ -1300,6 +1322,9 @@ header>* {
 
 .carousel-prev-btn,
 .carousel-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   color: rgba(255, 255, 255, 0.6);
@@ -1311,6 +1336,15 @@ header>* {
   justify-content: center;
   border-radius: 50%;
   flex-shrink: 0;
+  z-index: 10;
+}
+
+.carousel-prev-btn {
+  left: 0px;
+}
+
+.carousel-next-btn {
+  right: 0px;
 }
 
 .carousel-prev-btn svg,
@@ -1323,7 +1357,7 @@ header>* {
 .carousel-next-btn:hover {
   color: white;
   background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
 @keyframes fadeIn {
@@ -1350,6 +1384,26 @@ header>* {
 
   .alumni-right {
     width: 100%;
+  }
+
+  .carousel-container {
+    height: 350px;
+  }
+
+  .alumni-card {
+    width: 250px;
+    height: 300px;
+    padding: 1.5rem;
+  }
+
+  .alumni-card.prev {
+    transform: translate(-110%, -50%) scale(0.7);
+    opacity: 0.5;
+  }
+
+  .alumni-card.next {
+    transform: translate(10%, -50%) scale(0.7);
+    opacity: 0.5;
   }
 
   .carousel-prev-btn svg,

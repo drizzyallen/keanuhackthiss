@@ -278,20 +278,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtnAlumni = document.querySelector('.carousel-prev-btn');
   let currentCardIndex = 0;
 
+  function updateCarousel() {
+    alumniCards.forEach((card, index) => {
+      card.classList.remove('active', 'prev', 'next');
+      if (index === currentCardIndex) {
+        card.classList.add('active');
+      } else if (index === (currentCardIndex - 1 + alumniCards.length) % alumniCards.length) {
+        card.classList.add('prev');
+      } else if (index === (currentCardIndex + 1) % alumniCards.length) {
+        card.classList.add('next');
+      }
+    });
+  }
+
   if (alumniCards.length > 0) {
+    updateCarousel();
+
     if (nextBtnAlumni) {
       nextBtnAlumni.addEventListener('click', () => {
-        alumniCards[currentCardIndex].classList.remove('active');
         currentCardIndex = (currentCardIndex + 1) % alumniCards.length;
-        alumniCards[currentCardIndex].classList.add('active');
+        updateCarousel();
       });
     }
 
     if (prevBtnAlumni) {
       prevBtnAlumni.addEventListener('click', () => {
-        alumniCards[currentCardIndex].classList.remove('active');
         currentCardIndex = (currentCardIndex - 1 + alumniCards.length) % alumniCards.length;
-        alumniCards[currentCardIndex].classList.add('active');
+        updateCarousel();
       });
     }
   }
