@@ -1665,6 +1665,43 @@ img[src*="KeanCS"] {
   }
 }
 
+/* PRIZES SECTION */
+.prize-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.prize-item-img {
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.prize-text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .prize-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
 /* END OF PARTNERS SECTION */
 /* SCHEDULE SECTION */
 .schedule-section {
