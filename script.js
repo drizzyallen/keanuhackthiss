@@ -276,6 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const alumniCards = document.querySelectorAll('.alumni-card');
   const nextBtnAlumni = document.querySelector('.carousel-next-btn');
   const prevBtnAlumni = document.querySelector('.carousel-prev-btn');
+  const alumniIndicator = document.querySelector('.carousel-indicator');
   let currentCardIndex = 0;
 
   function updateCarousel() {
@@ -289,6 +290,10 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('next');
       }
     });
+
+    if (alumniIndicator && alumniCards.length > 0) {
+      alumniIndicator.textContent = `${currentCardIndex + 1} out of ${alumniCards.length}`;
+    }
   }
 
   if (alumniCards.length > 0) {

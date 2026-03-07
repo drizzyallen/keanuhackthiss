@@ -1353,6 +1353,25 @@ header>* {
   height: 44px;
 }
 
+.carousel-indicator {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  z-index: 1000;
+  background-color: transparent;
+  padding: 0;
+  pointer-events: none;
+}
+
 .carousel-prev-btn:hover,
 .carousel-next-btn:hover {
   color: white;
